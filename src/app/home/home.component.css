@@ -1,0 +1,11 @@
+div.viewbutton{
+  padding: 50px 30px 80px 600px;
+}
+div.groceryImage{
+  background-image: url("/../../assets/grocery.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  height: 100%;
+}
