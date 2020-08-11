@@ -2,3 +2,6 @@ h1{
   text-align: center;
   color: darkblue;
 }
+.example-spacer {
+  flex: 1 1 auto;
+}
