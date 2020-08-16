@@ -28,5 +28,12 @@ export const MOCK_PRODUCTS: Products[] = [
     imagePath: '/../../assets/Banana.jpg',
     description: 'Naturally Riped Banana from Kerala',
     price: 150,
+  },
+  {
+    id: 5,
+    name: 'Wheat Flour',
+    imagePath: '/../../assets/Wheat.jpg',
+    description: 'Wheat Flour from Aashirvaadh',
+    price: 200,
   }
 ];
