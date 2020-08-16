@@ -1,1 +1,15 @@
-<p>Product page works</p>
+<mat-card class = "tp-card" *ngFor="let product of products">
+  <mat-card-header>
+    <mat-card-title>{{product.name}}</mat-card-title>
+  </mat-card-header>
+  <img mat-card-image [src] = product.imagePath [alt] = product.name>
+  <mat-card-content>
+    <p>
+     {{product.description}}
+    </p>
+    <span class="bold">Price: {{product.price}}Rs</span>
+  </mat-card-content>
+  <mat-card-actions>
+    <button mat-button mat-raised-button color="primary">SELECT</button>
+  </mat-card-actions>
+</mat-card>

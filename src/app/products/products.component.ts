@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {ActivatedRoute} from '@angular/router';
+import {MOCK_PRODUCTS} from './mock-products';
 
 @Component({
   selector: 'app-products',
@@ -8,7 +9,7 @@ import {ActivatedRoute} from '@angular/router';
 })
 export class ProductsComponent implements OnInit {
 
-  products;
+  products = MOCK_PRODUCTS;
 
   constructor(private route: ActivatedRoute) { }
 

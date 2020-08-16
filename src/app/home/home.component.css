@@ -1,5 +1,8 @@
-div.viewbutton{
-  padding: 50px 30px 80px 600px;
+.example-button-row{
+  width:100%;
+  display: flex;
+  justify-content: center;
+  padding-top: 30px;
 }
 div.groceryImage{
   background-image: url("/../../assets/grocery.jpg");

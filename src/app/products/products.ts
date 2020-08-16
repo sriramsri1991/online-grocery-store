@@ -4,5 +4,5 @@ export interface Products {
   name: string;
   imagePath: string;
   description: string;
-  price: bigint;
+  price: number;
 }
