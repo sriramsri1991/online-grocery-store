@@ -14,6 +14,7 @@ import {MatIconModule} from '@angular/material/icon';
 import { HomeComponent } from './home/home.component';
 import {MatCardModule} from '@angular/material/card';
 import {FlexLayoutModule} from '@angular/flex-layout';
+import { ShoppingCartComponent } from './shopping-cart/shopping-cart.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,8 @@ import {FlexLayoutModule} from '@angular/flex-layout';
     ProductsComponent,
     ProductDetailsComponent,
     HeaderComponent,
-    HomeComponent
+    HomeComponent,
+    ShoppingCartComponent
   ],
   imports: [
     BrowserModule,
