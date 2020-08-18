@@ -32,7 +32,7 @@ export const MOCK_PRODUCTS: Products[] = [
   {
     id: 5,
     name: 'Wheat Flour',
-    imagePath: '/../../assets/Wheat.jpg',
+    imagePath: '/../../assets/Wheat.jpeg',
     description: 'Wheat Flour from Aashirvaadh',
     price: 200,
   }

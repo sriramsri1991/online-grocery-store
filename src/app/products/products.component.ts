@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import {ActivatedRoute} from '@angular/router';
+import {Router} from '@angular/router';
 import {MOCK_PRODUCTS} from './mock-products';
 
 @Component({
@@ -11,9 +11,14 @@ export class ProductsComponent implements OnInit {
 
   products = MOCK_PRODUCTS;
 
-  constructor(private route: ActivatedRoute) { }
+  constructor(private route: Router) { }
 
   ngOnInit(): void {
+  }
+
+  btnClick(index: number): void {
+    console.log(index);
+    this.route.navigate(['products' + '/' + index]);
   }
 
 }

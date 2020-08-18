@@ -1,1 +1,18 @@
-<p>product-details works!</p>
+
+<div *ngIf="selectedProduct">
+  <mat-card class="tp-card">
+    <mat-card-header>
+      <mat-card-title>{{selectedProduct.name}}</mat-card-title>
+    </mat-card-header>
+    <img class = "product-image" mat-card-image [src] = selectedProduct.imagePath [alt] = selectedProduct.name>
+    <mat-card-content>
+      <p>
+        {{selectedProduct.description}}
+      </p>
+      <span class="bold">Price: {{selectedProduct.price}}Rs</span>
+    </mat-card-content>
+    <mat-card-actions>
+      <button mat-button mat-raised-button color="primary">Add To Cart</button>
+    </mat-card-actions>
+  </mat-card>
+</div>
