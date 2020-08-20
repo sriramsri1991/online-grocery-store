@@ -17,6 +17,7 @@ import {FlexLayoutModule} from '@angular/flex-layout';
 import { ShoppingCartComponent } from './shopping-cart/shopping-cart.component';
 import {CartService} from './cart.service';
 import { ProductConfirmationComponent } from './product-confirmation/product-confirmation.component';
+import { OrderConfirmationComponent } from './order-confirmation/order-confirmation.component';
 
 @NgModule({
   declarations: [
@@ -26,7 +27,8 @@ import { ProductConfirmationComponent } from './product-confirmation/product-con
     HeaderComponent,
     HomeComponent,
     ShoppingCartComponent,
-    ProductConfirmationComponent
+    ProductConfirmationComponent,
+    OrderConfirmationComponent
   ],
   imports: [
     BrowserModule,
