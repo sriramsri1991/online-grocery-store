@@ -15,6 +15,8 @@ import { HomeComponent } from './home/home.component';
 import {MatCardModule} from '@angular/material/card';
 import {FlexLayoutModule} from '@angular/flex-layout';
 import { ShoppingCartComponent } from './shopping-cart/shopping-cart.component';
+import {CartService} from './cart.service';
+import { ProductConfirmationComponent } from './product-confirmation/product-confirmation.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +25,8 @@ import { ShoppingCartComponent } from './shopping-cart/shopping-cart.component';
     ProductDetailsComponent,
     HeaderComponent,
     HomeComponent,
-    ShoppingCartComponent
+    ShoppingCartComponent,
+    ProductConfirmationComponent
   ],
   imports: [
     BrowserModule,
@@ -37,7 +40,7 @@ import { ShoppingCartComponent } from './shopping-cart/shopping-cart.component';
     MatButtonModule,
     FlexLayoutModule
   ],
-  providers: [],
+  providers: [CartService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

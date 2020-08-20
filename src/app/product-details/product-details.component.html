@@ -12,7 +12,7 @@
       <span class="bold">Price: {{selectedProduct.price}}Rs</span>
     </mat-card-content>
     <mat-card-actions>
-      <button mat-button mat-raised-button color="primary">Add To Cart</button>
+      <button mat-button mat-raised-button color="primary" (click)="addToCart(selectedProduct)">Add To Cart</button>
       <button mat-button mat-raised-button color="primary" routerLink="/products">See More Products</button>
     </mat-card-actions>
   </mat-card>

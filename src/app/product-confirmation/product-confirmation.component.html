@@ -1,0 +1,16 @@
+<div *ngIf="items?.length > 0">
+  <p class="bold">The Product is successfully added</p>
+  <section>
+    <div class="example-button-row">
+      <mat-card-actions>
+        <button mat-button mat-raised-button color="primary" routerLink="/cart">Go To Cart</button>
+        <button mat-button mat-raised-button color="primary" routerLink="/products">See More Products</button>
+      </mat-card-actions>
+    </div>
+  </section>
+</div>
+<div *ngIf="items?.length == 0" class="no-product">
+  <p class="bold">No Products in the cart</p>
+  <button mat-button mat-raised-button color="primary" routerLink="/products">Add Products</button>
+</div>
+
