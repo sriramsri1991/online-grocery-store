@@ -13,13 +13,22 @@
         <p>
           {{item.description}}
         </p>
-        <span class="bold">Price: {{item.price}}Rs</span>
+        <span class="bold">Price: {{item.price}} Rs</span>
       </mat-card-content>
+      <span>Quantity:
+      <button (click)="decrease_quantity(item)">
+        <mat-icon>remove_circle</mat-icon>
+      </button>
+      <input type="text" class="quantity" value="{{item.quantity}}" (change)="countPrice(item)">
+      <button (click)="increase_quantity(item)">
+        <mat-icon>add_circle</mat-icon>
+      </button>
+        </span>
     </mat-card>
+    <mat-card-actions>
+      <button mat-button mat-raised-button color="primary" (click)="placeOrder();">Place Order</button>
+      <button mat-button mat-raised-button color="primary" (click)="cancelOrder();">Cancel Order</button>
+    </mat-card-actions>
   </div>
-  <mat-card-actions>
-    <button mat-button mat-raised-button color="primary" (click)="placeOrder();">Place Order</button>
-    <button mat-button mat-raised-button color="primary" (click)="cancelOrder();">Cancel Order</button>
-  </mat-card-actions>
 </div>
 

@@ -27,5 +27,17 @@ export class ShoppingCartComponent implements OnInit {
     this.cartService.clearCart();
     this.route.navigate(['products']);
   }
+  decrease_quantity(item): void{
+    if (item.quantity === 0){
+      return alert('cant be in minus');
+    }
+    item.quantity--;
+
+  }
+  countPrice(item): void{
+  }
+  increase_quantity(item): void{
+    item.quantity++;
+  }
 
 }

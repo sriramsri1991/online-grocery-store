@@ -7,7 +7,7 @@ export const MOCK_PRODUCTS: Products[] = [
     imagePath: '/../../assets/Mango.jpg',
     description: 'Sweet Mangoes from Coutrallam',
     price: 300,
-    quantity: 0
+    quantity: 1
   },
   {
     id: 2,
@@ -15,7 +15,7 @@ export const MOCK_PRODUCTS: Products[] = [
     imagePath: '/../../assets/Apple.jpg',
     description: 'Apples from Indian Himalayan',
     price: 400,
-    quantity: 0
+    quantity: 1
   },
   {
     id: 3,
@@ -23,7 +23,7 @@ export const MOCK_PRODUCTS: Products[] = [
     imagePath: '/../../assets/Grapes.jpg',
     description: 'Grapes from Ooty',
     price: 150,
-    quantity: 0
+    quantity: 1
   },
   {
     id: 4,
@@ -31,7 +31,7 @@ export const MOCK_PRODUCTS: Products[] = [
     imagePath: '/../../assets/Banana.jpg',
     description: 'Naturally Riped Banana from Kerala',
     price: 150,
-    quantity: 0
+    quantity: 1
   },
   {
     id: 5,
@@ -39,6 +39,6 @@ export const MOCK_PRODUCTS: Products[] = [
     imagePath: '/../../assets/Wheat.jpeg',
     description: 'Wheat Flour from Aashirvaadh',
     price: 200,
-    quantity: 0
+    quantity: 1
   }
 ];
