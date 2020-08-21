@@ -1,8 +1,6 @@
-<div class="cart">
-  <div *ngIf="items?.length == 0">
-    <p class="bold">There are no products in the cart</p>
-    <button mat-button mat-raised-button color="primary" routerLink="/products">Add Products</button>
-  </div>
+<div class="no-items" *ngIf="items?.length == 0">
+  <p class="bold">There are no products in the cart</p>
+  <button mat-button mat-raised-button color="primary" routerLink="/products">Add Products</button>
 </div>
 <div *ngIf="items?.length > 0">
   <div *ngFor="let item of items">

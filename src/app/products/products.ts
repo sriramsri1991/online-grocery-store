@@ -5,4 +5,5 @@ export interface Products {
   imagePath: string;
   description: string;
   price: number;
+  quantity: number;
 }
