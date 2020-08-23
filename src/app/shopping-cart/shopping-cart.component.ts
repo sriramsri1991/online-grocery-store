@@ -10,12 +10,14 @@ import {Router} from '@angular/router';
 })
 export class ShoppingCartComponent implements OnInit {
   items: Products[];
+  price: number;
 
   constructor(private cartService: CartService,
               private route: Router) { }
 
   ngOnInit(): void {
     this.items = this.cartService.getItems();
+    this.price = this.recalculateTotalAmount();
   }
   placeOrder(): void {
     this.items = [];
@@ -32,12 +34,27 @@ export class ShoppingCartComponent implements OnInit {
       return alert('Quantity cannot be in negative');
     }
     item.quantity--;
+    this.recalculateTotalAmount();
 
   }
   countPrice(item): void{
+    this.price = 0;
+    for (const i of this.items){
+      this.price += i.price * i.quantity;
+    }
   }
   increase_quantity(item): void{
     item.quantity++;
+    this.recalculateTotalAmount();
+  }
+
+  recalculateTotalAmount(): number {
+    let newTotalAmount = 0;
+    this.items.forEach( cartItem => {
+      newTotalAmount += (cartItem.price * cartItem.quantity);
+    });
+    this.price = newTotalAmount;
+    return this.price;
   }
 
 }
