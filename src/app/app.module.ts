@@ -18,6 +18,7 @@ import { ShoppingCartComponent } from './shopping-cart/shopping-cart.component';
 import {CartService} from './cart.service';
 import { ProductConfirmationComponent } from './product-confirmation/product-confirmation.component';
 import { OrderConfirmationComponent } from './order-confirmation/order-confirmation.component';
+import {FormsModule} from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -32,6 +33,7 @@ import { OrderConfirmationComponent } from './order-confirmation/order-confirmat
   ],
   imports: [
     BrowserModule,
+    FormsModule,
     AppRoutingModule,
     BrowserAnimationsModule,
     MatButtonModule,

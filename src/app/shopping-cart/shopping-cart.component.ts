@@ -29,7 +29,7 @@ export class ShoppingCartComponent implements OnInit {
   }
   decrease_quantity(item): void{
     if (item.quantity === 0){
-      return alert('cant be in minus');
+      return alert('Quantity cannot be in negative');
     }
     item.quantity--;
 
