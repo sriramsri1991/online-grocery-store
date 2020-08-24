@@ -38,10 +38,7 @@ export class ShoppingCartComponent implements OnInit {
 
   }
   countPrice(item): void{
-    this.price = 0;
-    for (const i of this.items){
-      this.price += i.price * i.quantity;
-    }
+    this.recalculateTotalAmount();
   }
   increase_quantity(item): void{
     item.quantity++;
@@ -55,6 +52,9 @@ export class ShoppingCartComponent implements OnInit {
     });
     this.price = newTotalAmount;
     return this.price;
+  }
+  trackByIndex(index: number, obj: any): any {
+    return index;
   }
 
 }

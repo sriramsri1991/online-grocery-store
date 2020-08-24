@@ -3,7 +3,7 @@
   <button mat-button mat-raised-button color="primary" routerLink="/products">Add Products</button>
 </div>
 <div *ngIf="items?.length > 0">
-  <div *ngFor="let item of items">
+  <div *ngFor="let item of items;let index = index;trackBy:trackByIndex;">
     <mat-card class="tp-card">
       <mat-card-header>
         <mat-card-title>{{item.name}}</mat-card-title>
@@ -19,7 +19,7 @@
       <button (click)="decrease_quantity(item)">
         <mat-icon>remove_circle</mat-icon>
       </button>
-      <input type="text" class="quantity" value="{{item.quantity}}" (change)="countPrice(item)">
+      <input type="text" class="quantity" [(ngModel)]="items[index].quantity" (change)="countPrice(item)">
       <button (click)="increase_quantity(item)">
         <mat-icon>add_circle</mat-icon>
       </button>
@@ -30,7 +30,7 @@
       <button mat-button mat-raised-button color="primary" (click)="cancelOrder();">Cancel Order</button>
     </mat-card-actions>
   </div>
-  <span>Total price: {{price}}</span>
+  <span>Total price: {{price}} Rs</span>
 </div>
 
 
