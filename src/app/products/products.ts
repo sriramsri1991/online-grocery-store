@@ -4,6 +4,7 @@ export interface Products {
   name: string;
   imagePath: string;
   description: string;
+  longDescription: string;
   price: number;
   quantity: number;
 }
