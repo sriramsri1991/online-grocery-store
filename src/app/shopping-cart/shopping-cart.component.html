@@ -10,10 +10,8 @@
       </mat-card-header>
       <img class = "product-image" mat-card-image [src] = item.imagePath [alt] = item.name>
       <mat-card-content>
-        <p>
-          {{item.description}}
-        </p>
-        <span class="bold">Price: {{item.price}} Rs</span>
+        <p><b>Product Id:</b> {{item.id}}</p>
+        <p><b>Price:</b> {{item.price}} Rs</p>
       </mat-card-content>
       <span>Quantity:
       <button (click)="decrease_quantity(item)">
