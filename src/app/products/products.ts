@@ -8,3 +8,7 @@ export interface Products {
   price: number;
   quantity: number;
 }
+
+export interface MockProducts {
+ products: Products[];
+}
