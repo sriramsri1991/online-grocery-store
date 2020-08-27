@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import {Router} from '@angular/router';
-import {MOCK_PRODUCTS} from './mock-products';
+import {ProductService} from './product.service';
+import {Observable} from 'rxjs';
+import {Products} from './products';
 
 @Component({
   selector: 'app-products',
@@ -9,16 +11,24 @@ import {MOCK_PRODUCTS} from './mock-products';
 })
 export class ProductsComponent implements OnInit {
 
-  products = MOCK_PRODUCTS;
+  products;
 
-  constructor(private route: Router) { }
+  constructor(private route: Router,
+              private productService: ProductService) { }
 
   ngOnInit(): void {
+    this.getProducts().subscribe(
+      data => this.products = data
+    );
   }
 
   btnClick(index: number): void {
     console.log(index);
     this.route.navigate(['products' + '/' + index]);
+  }
+
+  getProducts(): Observable<Products[]> {
+    return this.productService.getProducts();
   }
 
 }

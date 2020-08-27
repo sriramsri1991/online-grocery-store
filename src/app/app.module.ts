@@ -19,6 +19,10 @@ import {CartService} from './cart.service';
 import { ProductConfirmationComponent } from './product-confirmation/product-confirmation.component';
 import { OrderConfirmationComponent } from './order-confirmation/order-confirmation.component';
 import {FormsModule} from '@angular/forms';
+import {HttpClientModule} from '@angular/common/http';
+import {HttpClientInMemoryWebApiModule, InMemoryWebApiModule} from 'angular-in-memory-web-api';
+import {InMemoryDataService} from './in-memory-data.service';
+import {ProductService} from './products/product.service';
 
 @NgModule({
   declarations: [
@@ -35,6 +39,8 @@ import {FormsModule} from '@angular/forms';
     BrowserModule,
     FormsModule,
     AppRoutingModule,
+    HttpClientModule,
+    HttpClientInMemoryWebApiModule.forRoot(InMemoryDataService, { dataEncapsulation: false }),
     BrowserAnimationsModule,
     MatButtonModule,
     MatDividerModule,
